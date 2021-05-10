@@ -23,11 +23,15 @@ public class AppInscricoes extends javax.swing.JFrame {
     static ArrayList<Formandos> lista = new ArrayList<>();
     static ArrayList<Cursos> lista1 = new ArrayList<>();
     static ArrayList<Disciplinas> lista2 = new ArrayList<>();
+    static ArrayList<FormandosCursos> lista3 = new ArrayList<>();
+    static ArrayList<CursosDisciplinas> lista4 = new ArrayList<>();
 
 ///global variables////
     static int idFormando = 1;
     static int idCurso = 1;
     static int idDisciplina = 1;
+    static int inscricao = 1;
+    static int idreg = 1;
 
     /**
      * Creates new form AppInscricoes
@@ -131,7 +135,74 @@ public class AppInscricoes extends javax.swing.JFrame {
         jdCarregarL = new javax.swing.JTextField();
         jdAtualizar = new javax.swing.JButton();
         jPanel7 = new javax.swing.JPanel();
+        jifID = new javax.swing.JSpinner();
+        jButton1 = new javax.swing.JButton();
+        jLabel24 = new javax.swing.JLabel();
+        jfIDaluno2 = new javax.swing.JTextField();
+        jfNome2 = new javax.swing.JTextField();
+        jLabel25 = new javax.swing.JLabel();
+        jLabel26 = new javax.swing.JLabel();
+        jfIdade2 = new javax.swing.JTextField();
+        jfAltura2 = new javax.swing.JTextField();
+        jLabel27 = new javax.swing.JLabel();
+        jLabel28 = new javax.swing.JLabel();
+        jfMasc2 = new javax.swing.JRadioButton();
+        jfFemi2 = new javax.swing.JRadioButton();
+        jLabel29 = new javax.swing.JLabel();
+        jfPais2 = new javax.swing.JTextField();
+        jScrollPane7 = new javax.swing.JScrollPane();
+        jfDisp2 = new javax.swing.JTextArea();
+        jPanel4 = new javax.swing.JPanel();
+        jLabel19 = new javax.swing.JLabel();
+        jifInscreverAlunos = new javax.swing.JButton();
+        jifRemover = new javax.swing.JButton();
+        jifListarA = new javax.swing.JButton();
+        jScrollPane8 = new javax.swing.JScrollPane();
+        jifDisp2 = new javax.swing.JTextArea();
+        jifComboBox = new javax.swing.JComboBox<>();
+        jifCarregarCurso = new javax.swing.JButton();
+        jLabel21 = new javax.swing.JLabel();
+        jifcarregar2 = new javax.swing.JTextField();
+        jifLimpar = new javax.swing.JButton();
+        jifCID = new javax.swing.JTextField();
+        jfcSpinner1 = new javax.swing.JSpinner();
+        jLabel20 = new javax.swing.JLabel();
+        jfcarregar1 = new javax.swing.JTextField();
+        jfRestaura1 = new javax.swing.JButton();
         jPanel8 = new javax.swing.JPanel();
+        jPanel5 = new javax.swing.JPanel();
+        jPanel9 = new javax.swing.JPanel();
+        jcDiretor1 = new javax.swing.JTextField();
+        jLabel22 = new javax.swing.JLabel();
+        jcArea1 = new javax.swing.JTextField();
+        jLabel23 = new javax.swing.JLabel();
+        jcHoras1 = new javax.swing.JTextField();
+        jLabel30 = new javax.swing.JLabel();
+        jLabel31 = new javax.swing.JLabel();
+        jcNome1 = new javax.swing.JTextField();
+        jLabel32 = new javax.swing.JLabel();
+        jcIDcurso1 = new javax.swing.JTextField();
+        jdcID = new javax.swing.JSpinner();
+        jdcCarregarC = new javax.swing.JButton();
+        jScrollPane9 = new javax.swing.JScrollPane();
+        jfDisp3 = new javax.swing.JTextArea();
+        jdcRestaurar = new javax.swing.JButton();
+        jLabel33 = new javax.swing.JLabel();
+        jdccarregar1 = new javax.swing.JTextField();
+        jPanel10 = new javax.swing.JPanel();
+        jScrollPane10 = new javax.swing.JScrollPane();
+        jifDisp3 = new javax.swing.JTextArea();
+        jdcListarDispR = new javax.swing.JButton();
+        jifLimpar1 = new javax.swing.JButton();
+        jfcSpinner2 = new javax.swing.JSpinner();
+        jdcRemoverD = new javax.swing.JButton();
+        jdcInserir = new javax.swing.JButton();
+        jLabel34 = new javax.swing.JLabel();
+        jifComboBox1 = new javax.swing.JComboBox<>();
+        jcdCID1 = new javax.swing.JTextField();
+        jdcCarregarDiscip = new javax.swing.JButton();
+        jLabel35 = new javax.swing.JLabel();
+        jifcarregar3 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -271,12 +342,7 @@ public class AppInscricoes extends javax.swing.JFrame {
                                         .addGap(115, 115, 115))
                                     .addComponent(jfcarregar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addComponent(jfMasc)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jfFemi))
-                                    .addComponent(jfPais, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(jfPais, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jfAtualizarFormando)
@@ -287,7 +353,11 @@ public class AppInscricoes extends javax.swing.JFrame {
                                         .addGap(102, 102, 102)
                                         .addComponent(jfGuardar, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jfRestaura, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                                        .addComponent(jfRestaura, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jfMasc)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jfFemi))))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -303,7 +373,7 @@ public class AppInscricoes extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(jfClean))
                             .addComponent(jfIDaluno, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(95, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -319,37 +389,36 @@ public class AppInscricoes extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel1)
                     .addComponent(jfIDaluno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(9, 9, 9)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(9, 9, 9)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel2)
                             .addComponent(jfNome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
-                        .addComponent(jLabel4)
-                        .addGap(18, 18, 18)
-                        .addComponent(jLabel5)
-                        .addGap(0, 0, 0)
+                        .addComponent(jLabel4))
+                    .addComponent(jfIdade, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(9, 9, 9)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel5)
+                    .addComponent(jfAltura, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel6)
-                        .addGap(26, 26, 26)
-                        .addComponent(jLabel3)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 13, Short.MAX_VALUE))
+                        .addGap(23, 23, 23)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel3)
+                            .addComponent(jfPais, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jfMasc)
+                            .addComponent(jfFemi))
+                        .addGap(6, 72, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jfAltura, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                .addComponent(jfIdade, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(34, 34, 34)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jfMasc)
-                                    .addComponent(jfFemi))
-                                .addGap(18, 18, 18)
-                                .addComponent(jfPais, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(6, 6, 6))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                                 .addComponent(jfAtualizarFormando)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -576,7 +645,7 @@ public class AppInscricoes extends javax.swing.JFrame {
                             .addComponent(jcCarregarL, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(27, Short.MAX_VALUE))
+                .addContainerGap(51, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -744,7 +813,7 @@ public class AppInscricoes extends javax.swing.JFrame {
                                 .addComponent(jLabel18)
                                 .addGap(18, 18, 18)
                                 .addComponent(jdCarregarL, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(134, Short.MAX_VALUE))
+                .addContainerGap(197, Short.MAX_VALUE))
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -789,33 +858,563 @@ public class AppInscricoes extends javax.swing.JFrame {
                         .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel18)
                             .addComponent(jdCarregarL, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(30, Short.MAX_VALUE))
+                .addContainerGap(54, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Disciplinas", jPanel6);
+
+        jifID.setModel(new javax.swing.SpinnerNumberModel(1, 1, null, 1));
+
+        jButton1.setText("Carregar Formando");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
+        jLabel24.setText("ID Formando");
+
+        jfIDaluno2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jfIDaluno2.setEnabled(false);
+
+        jLabel25.setText("Nome");
+
+        jLabel26.setText("Idade");
+
+        jLabel27.setText("Altura");
+
+        jLabel28.setText("Sexo");
+
+        jfSexo.add(jfMasc2);
+        jfMasc2.setText("Masculino");
+
+        jfSexo.add(jfFemi2);
+        jfFemi2.setText("Feminino");
+
+        jLabel29.setText("País");
+
+        jfDisp2.setColumns(20);
+        jfDisp2.setRows(5);
+        jScrollPane7.setViewportView(jfDisp2);
+
+        jPanel4.setForeground(new java.awt.Color(102, 102, 102));
+        jPanel4.setToolTipText("");
+
+        jLabel19.setText("Selecionar Curso");
+
+        jifInscreverAlunos.setText("Inscrever Aluno");
+        jifInscreverAlunos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jifInscreverAlunosActionPerformed(evt);
+            }
+        });
+
+        jifRemover.setText("Remover Inscrição");
+        jifRemover.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jifRemoverActionPerformed(evt);
+            }
+        });
+
+        jifListarA.setText("Listar Alunos Inscritos no Curso");
+        jifListarA.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jifListarAActionPerformed(evt);
+            }
+        });
+
+        jifDisp2.setColumns(20);
+        jifDisp2.setRows(5);
+        jScrollPane8.setViewportView(jifDisp2);
+
+        jifComboBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jifComboBoxActionPerformed(evt);
+            }
+        });
+
+        jifCarregarCurso.setText("Carregar Cursos");
+        jifCarregarCurso.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jifCarregarCursoActionPerformed(evt);
+            }
+        });
+
+        jLabel21.setText("Nome do Ficheiro");
+
+        jifLimpar.setText("Limpar");
+        jifLimpar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jifLimparActionPerformed(evt);
+            }
+        });
+
+        jifCID.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jifCID.setEnabled(false);
+
+        jfcSpinner1.setModel(new javax.swing.SpinnerNumberModel(1, 1, null, 1));
+
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 504, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel4Layout.createSequentialGroup()
+                                .addComponent(jifInscreverAlunos)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jifRemover)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jfcSpinner1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel4Layout.createSequentialGroup()
+                                .addComponent(jifListarA)
+                                .addGap(18, 18, 18)
+                                .addComponent(jifLimpar)))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addComponent(jLabel19)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jifComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jifCID, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                                    .addComponent(jLabel21)
+                                    .addGap(115, 115, 115))
+                                .addComponent(jifcarregar2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jifCarregarCurso))
+                        .addGap(96, 96, 96))))
+        );
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel19)
+                            .addComponent(jifComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jifCID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jifCarregarCurso)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jifcarregar2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel21))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jifInscreverAlunos)
+                    .addComponent(jifRemover)
+                    .addComponent(jfcSpinner1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(31, 31, 31)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jifListarA)
+                    .addComponent(jifLimpar))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jLabel20.setText("Nome do Ficheiro");
+
+        jfRestaura1.setText("Carregar Lista de Alunos");
+        jfRestaura1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jfRestaura1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
         jPanel7Layout.setHorizontalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 993, Short.MAX_VALUE)
+            .addGroup(jPanel7Layout.createSequentialGroup()
+                .addGap(19, 19, 19)
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel7Layout.createSequentialGroup()
+                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel7Layout.createSequentialGroup()
+                                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel27, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel26, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel28, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel7Layout.createSequentialGroup()
+                                        .addComponent(jfIdade2, javax.swing.GroupLayout.DEFAULT_SIZE, 168, Short.MAX_VALUE)
+                                        .addGap(193, 193, 193))
+                                    .addGroup(jPanel7Layout.createSequentialGroup()
+                                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(jPanel7Layout.createSequentialGroup()
+                                                .addComponent(jfMasc2)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                .addComponent(jfFemi2))
+                                            .addComponent(jfAltura2, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                            .addGroup(jPanel7Layout.createSequentialGroup()
+                                .addGap(4, 4, 4)
+                                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
+                                            .addComponent(jLabel20)
+                                            .addGap(115, 115, 115))
+                                        .addComponent(jfcarregar1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(jfRestaura1))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel7Layout.createSequentialGroup()
+                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel7Layout.createSequentialGroup()
+                                .addComponent(jLabel29, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jfPais2, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel7Layout.createSequentialGroup()
+                                .addComponent(jLabel25, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jfNome2, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel7Layout.createSequentialGroup()
+                                .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jfIDaluno2, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel7Layout.createSequentialGroup()
+                                .addComponent(jifID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jButton1)))
+                        .addContainerGap())))
+            .addGroup(jPanel7Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 430, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel7Layout.setVerticalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 419, Short.MAX_VALUE)
+            .addGroup(jPanel7Layout.createSequentialGroup()
+                .addGap(17, 17, 17)
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jifID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton1))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel24)
+                    .addComponent(jfIDaluno2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel25)
+                    .addComponent(jfNome2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel26)
+                    .addComponent(jfIdade2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel27)
+                    .addComponent(jfAltura2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel28)
+                    .addComponent(jfMasc2)
+                    .addComponent(jfFemi2))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel29)
+                    .addComponent(jfPais2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jfRestaura1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jfcarregar1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel20))
+                .addContainerGap(40, Short.MAX_VALUE))
+            .addGroup(jPanel7Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         jTabbedPane1.addTab("Inscrever Formandos", jPanel7);
+
+        jLabel22.setText("Diretor de Curso");
+
+        jLabel23.setText("Área");
+
+        jLabel30.setText("Horas do Curso");
+
+        jLabel31.setText("Nome do Curso");
+
+        jLabel32.setText("ID Curso");
+
+        jcIDcurso1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jcIDcurso1.setEnabled(false);
+
+        jdcID.setModel(new javax.swing.SpinnerNumberModel(1, 1, null, 1));
+
+        jdcCarregarC.setText("Carregar Curso");
+        jdcCarregarC.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jdcCarregarCActionPerformed(evt);
+            }
+        });
+
+        jfDisp3.setColumns(20);
+        jfDisp3.setRows(5);
+        jScrollPane9.setViewportView(jfDisp3);
+
+        jdcRestaurar.setText("Carregar Lista de Cursos");
+        jdcRestaurar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jdcRestaurarActionPerformed(evt);
+            }
+        });
+
+        jLabel33.setText("Nome do Ficheiro");
+
+        javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
+        jPanel9.setLayout(jPanel9Layout);
+        jPanel9Layout.setHorizontalGroup(
+            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel9Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel9Layout.createSequentialGroup()
+                        .addComponent(jLabel32)
+                        .addGap(18, 18, 18)
+                        .addComponent(jcIDcurso1, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel9Layout.createSequentialGroup()
+                        .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(jLabel30, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel31, javax.swing.GroupLayout.Alignment.LEADING))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jcNome1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jcHoras1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanel9Layout.createSequentialGroup()
+                        .addComponent(jLabel22)
+                        .addGap(18, 18, 18)
+                        .addComponent(jcDiretor1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel9Layout.createSequentialGroup()
+                        .addComponent(jLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jcArea1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel9Layout.createSequentialGroup()
+                        .addComponent(jdcID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jdcCarregarC))
+                    .addGroup(jPanel9Layout.createSequentialGroup()
+                        .addGap(17, 17, 17)
+                        .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout.createSequentialGroup()
+                                    .addComponent(jLabel33)
+                                    .addGap(115, 115, 115))
+                                .addComponent(jdccarregar1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jdcRestaurar)))
+                    .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, 430, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel9Layout.setVerticalGroup(
+            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel9Layout.createSequentialGroup()
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jdcID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jdcCarregarC))
+                .addGap(16, 16, 16)
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel32)
+                    .addComponent(jcIDcurso1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel31)
+                    .addComponent(jcNome1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel30)
+                    .addComponent(jcHoras1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel23)
+                    .addComponent(jcArea1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel22)
+                    .addComponent(jcDiretor1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jdcRestaurar)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jdccarregar1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel33))
+                .addContainerGap(85, Short.MAX_VALUE))
+        );
+
+        jifDisp3.setColumns(20);
+        jifDisp3.setRows(5);
+        jScrollPane10.setViewportView(jifDisp3);
+
+        jdcListarDispR.setText("Listar Discipinas Registadas");
+        jdcListarDispR.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jdcListarDispRActionPerformed(evt);
+            }
+        });
+
+        jifLimpar1.setText("Limpar");
+        jifLimpar1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jifLimpar1ActionPerformed(evt);
+            }
+        });
+
+        jfcSpinner2.setModel(new javax.swing.SpinnerNumberModel(1, 1, null, 1));
+
+        jdcRemoverD.setText("Remover Disciplina");
+        jdcRemoverD.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jdcRemoverDActionPerformed(evt);
+            }
+        });
+
+        jdcInserir.setText("Inserir Disciplina");
+        jdcInserir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jdcInserirActionPerformed(evt);
+            }
+        });
+
+        jLabel34.setText("Selecionar Disciplina");
+
+        jifComboBox1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jifComboBox1ActionPerformed(evt);
+            }
+        });
+
+        jcdCID1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jcdCID1.setEnabled(false);
+
+        jdcCarregarDiscip.setText("Carregar Disciplinas");
+        jdcCarregarDiscip.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jdcCarregarDiscipActionPerformed(evt);
+            }
+        });
+
+        jLabel35.setText("Nome do Ficheiro");
+
+        javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
+        jPanel10.setLayout(jPanel10Layout);
+        jPanel10Layout.setHorizontalGroup(
+            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel10Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel10Layout.createSequentialGroup()
+                        .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jScrollPane10, javax.swing.GroupLayout.PREFERRED_SIZE, 504, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel10Layout.createSequentialGroup()
+                                .addComponent(jdcInserir)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jdcRemoverD)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jfcSpinner2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel10Layout.createSequentialGroup()
+                                .addComponent(jdcListarDispR)
+                                .addGap(18, 18, 18)
+                                .addComponent(jifLimpar1)))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(jPanel10Layout.createSequentialGroup()
+                        .addComponent(jLabel34)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jifComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jcdCID1, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel10Layout.createSequentialGroup()
+                                    .addComponent(jLabel35)
+                                    .addGap(115, 115, 115))
+                                .addComponent(jifcarregar3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jdcCarregarDiscip))
+                        .addGap(96, 96, 96))))
+        );
+        jPanel10Layout.setVerticalGroup(
+            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel10Layout.createSequentialGroup()
+                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel10Layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel34)
+                            .addComponent(jifComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jcdCID1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanel10Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jdcCarregarDiscip)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jifcarregar3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel35))))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jdcInserir)
+                    .addComponent(jdcRemoverD)
+                    .addComponent(jfcSpinner2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(31, 31, 31)
+                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jdcListarDispR)
+                    .addComponent(jifLimpar1))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane10, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
+        jPanel5.setLayout(jPanel5Layout);
+        jPanel5Layout.setHorizontalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jPanel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        jPanel5Layout.setVerticalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jPanel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
 
         javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
         jPanel8.setLayout(jPanel8Layout);
         jPanel8Layout.setHorizontalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 993, Short.MAX_VALUE)
+            .addGroup(jPanel8Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         jPanel8Layout.setVerticalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 419, Short.MAX_VALUE)
+            .addGroup(jPanel8Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Adicionar Disciplina a um Curso", jPanel8);
@@ -830,7 +1429,7 @@ public class AppInscricoes extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(60, 60, 60)
-                .addComponent(jTabbedPane1)
+                .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 476, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -857,7 +1456,7 @@ public class AppInscricoes extends javax.swing.JFrame {
     private void jfGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jfGuardarActionPerformed
         try {
             FileOutputStream fileOutputStream = new FileOutputStream(jfcarregar.getText());
-            try (ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream)) {
+            try ( ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream)) {
                 objectOutputStream.writeObject(lista);
                 objectOutputStream.flush();
             } catch (IOException ex) {
@@ -880,7 +1479,7 @@ public class AppInscricoes extends javax.swing.JFrame {
 
         try {
             fileInputStream = new FileInputStream(jfcarregar.getText());
-            try (ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream)) {
+            try ( ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream)) {
                 lista = (ArrayList<Formandos>) objectInputStream.readObject();
             } catch (IOException | ClassNotFoundException ex) {
                 Logger.getLogger(AppInscricoes.class.getName()).log(Level.SEVERE, null, ex);
@@ -1022,7 +1621,7 @@ public class AppInscricoes extends javax.swing.JFrame {
     private void jcGuardarListagemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcGuardarListagemActionPerformed
         try {
             FileOutputStream fileOutputStream = new FileOutputStream(jcCarregarL.getText());
-            try (ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream)) {
+            try ( ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream)) {
                 objectOutputStream.writeObject(lista1);
                 objectOutputStream.flush();
             } catch (IOException ex) {
@@ -1039,7 +1638,7 @@ public class AppInscricoes extends javax.swing.JFrame {
 
         try {
             fileInputStream = new FileInputStream(jcCarregarL.getText());
-            try (ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream)) {
+            try ( ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream)) {
                 lista1 = (ArrayList<Cursos>) objectInputStream.readObject();
             } catch (IOException | ClassNotFoundException ex) {
                 Logger.getLogger(AppInscricoes.class.getName()).log(Level.SEVERE, null, ex);
@@ -1143,7 +1742,7 @@ public class AppInscricoes extends javax.swing.JFrame {
     private void jdGuardarListagemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jdGuardarListagemActionPerformed
         try {
             FileOutputStream fileOutputStream = new FileOutputStream(jdCarregarL.getText());
-            try (ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream)) {
+            try ( ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream)) {
                 objectOutputStream.writeObject(lista2);
                 objectOutputStream.flush();
             } catch (IOException ex) {
@@ -1160,7 +1759,7 @@ public class AppInscricoes extends javax.swing.JFrame {
 
         try {
             fileInputStream = new FileInputStream(jdCarregarL.getText());
-            try (ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream)) {
+            try ( ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream)) {
                 lista2 = (ArrayList<Disciplinas>) objectInputStream.readObject();
             } catch (IOException | ClassNotFoundException ex) {
                 Logger.getLogger(AppInscricoes.class.getName()).log(Level.SEVERE, null, ex);
@@ -1243,6 +1842,237 @@ public class AppInscricoes extends javax.swing.JFrame {
         jdDisp.setText("");
         jdDispL.setText("");
     }//GEN-LAST:event_jdRegistarDMouseClicked
+////////////////////////////////////////////////////////////////Fim do menu das Disciplinas/////////////////////////////////////////////////
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        jfIDaluno2.setText(String.valueOf((lista.get((int) jifID.getValue() - 1).getId())));
+        jfNome2.setText(String.valueOf((lista.get((int) jifID.getValue() - 1).getNome())));
+        jfIdade2.setText(String.valueOf((lista.get((int) jifID.getValue() - 1).getIdade())));
+        jfAltura2.setText(String.valueOf((lista.get((int) jifID.getValue() - 1).getAltura())));
+        jfPais2.setText(String.valueOf((lista.get((int) jifID.getValue() - 1).getPais())));
+        jfDisp2.setText(String.valueOf(lista.get((int) jifID.getValue() - 1)));
+        if (lista.get((int) jfID.getValue() - 1).isSexo() == true) {
+            jfMasc2.setSelected(true);
+
+        } else {
+            jfFemi2.setSelected(true);
+        }
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jfRestaura1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jfRestaura1ActionPerformed
+        FileInputStream fileInputStream = null;
+
+        try {
+            fileInputStream = new FileInputStream(jfcarregar1.getText());
+            try ( ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream)) {
+                lista = (ArrayList<Formandos>) objectInputStream.readObject();
+            } catch (IOException | ClassNotFoundException ex) {
+                Logger.getLogger(AppInscricoes.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            for (int z = 0; z < lista.size(); z++) {
+                jfIDaluno2.setText(String.valueOf((lista.get(z).getId())));
+                jfNome2.setText(String.valueOf((lista.get(z).getNome())));
+                jfIdade2.setText(String.valueOf((lista.get(z).getIdade())));
+                jfAltura2.setText(String.valueOf((lista.get(z).getAltura())));
+                jfPais2.setText(String.valueOf((lista.get(z).getPais())));
+                jfDisp2.setText(String.valueOf(lista.get(z)));
+                if (lista.get(z).isSexo() == true) {
+                    jfMasc2.setSelected(true);
+
+                } else {
+                    jfFemi2.setSelected(true);
+                }
+
+            }
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(AppInscricoes.class.getName()).log(Level.SEVERE, null, ex);
+        } finally {
+            try {
+                fileInputStream.close();
+            } catch (IOException ex) {
+                Logger.getLogger(AppInscricoes.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+    }//GEN-LAST:event_jfRestaura1ActionPerformed
+
+    private void jifCarregarCursoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jifCarregarCursoActionPerformed
+        FileInputStream fileInputStream = null;
+
+        try {
+            fileInputStream = new FileInputStream(jifcarregar2.getText());
+            try ( ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream)) {
+                lista1 = (ArrayList<Cursos>) objectInputStream.readObject();
+            } catch (IOException | ClassNotFoundException ex) {
+                Logger.getLogger(AppInscricoes.class.getName()).log(Level.SEVERE, null, ex);
+            }
+
+            for (Cursos lista1 : lista1) {
+                jifComboBox.addItem(lista1.getNomeC());
+                //jifCID.setText((String.valueOf(lista1.getIdc())));
+
+            }
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(AppInscricoes.class.getName()).log(Level.SEVERE, null, ex);
+        } finally {
+            try {
+                fileInputStream.close();
+            } catch (IOException ex) {
+                Logger.getLogger(AppInscricoes.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+    }//GEN-LAST:event_jifCarregarCursoActionPerformed
+
+    private void jifInscreverAlunosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jifInscreverAlunosActionPerformed
+        FormandosCursos formandoscursos = new FormandosCursos();
+        formandoscursos.setInscricao(inscricao++);
+        formandoscursos.setIdCurso_(Integer.parseInt(jifCID.getText()));
+        formandoscursos.setCurso_(String.valueOf(jifComboBox.getSelectedItem()));
+        formandoscursos.setIdformando_(Integer.parseInt(jfIDaluno2.getText()));
+        formandoscursos.setNome_(jfNome2.getText());
+        formandoscursos.setIdade_(Integer.parseInt(jfIdade2.getText()));
+        formandoscursos.setAltura_(Integer.parseInt(jfAltura2.getText()));
+        if (jfMasc2.isSelected()) {
+            formandoscursos.setSexo_(true);
+        } else {
+            formandoscursos.setSexo_(false);
+        }
+        formandoscursos.setPais_(jfPais2.getText());
+
+        lista3.add(formandoscursos);
+    }//GEN-LAST:event_jifInscreverAlunosActionPerformed
+
+    private void jifListarAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jifListarAActionPerformed
+        for (FormandosCursos f : lista3) {
+            System.out.println(f.toString());
+            jifDisp2.append(f.toString() + "\n");
+        }
+    }//GEN-LAST:event_jifListarAActionPerformed
+
+    private void jifLimparActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jifLimparActionPerformed
+        jifDisp2.setText("");
+    }//GEN-LAST:event_jifLimparActionPerformed
+
+    private void jifComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jifComboBoxActionPerformed
+        int indexbox = jifComboBox.getSelectedIndex();
+
+        jifCID.setText(String.valueOf(indexbox + 1));
+    }//GEN-LAST:event_jifComboBoxActionPerformed
+
+    private void jifRemoverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jifRemoverActionPerformed
+        FormandosCursos formandoscursos = new FormandosCursos();
+        lista3.remove((int) jfcSpinner1.getValue() - 1);
+        inscricao = 2;
+        int j = lista3.size();
+        for (int x = 1; x < j + 1; x++) {
+            formandoscursos = lista3.get(x - 1);
+            formandoscursos.setInscricao(inscricao++);
+        }
+
+    }//GEN-LAST:event_jifRemoverActionPerformed
+//////////////////////////////////////////////////////////Fim menu Inscrever Formados////////////////////////////////////////////////////////////////////
+    private void jdcRestaurarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jdcRestaurarActionPerformed
+        FileInputStream fileInputStream = null;
+
+        try {
+            fileInputStream = new FileInputStream(jdccarregar1.getText());
+            try ( ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream)) {
+                lista1 = (ArrayList<Cursos>) objectInputStream.readObject();
+            } catch (IOException | ClassNotFoundException ex) {
+                Logger.getLogger(AppInscricoes.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            for (int z = 0; z < lista1.size(); z++) {
+                jcIDcurso1.setText(String.valueOf((lista1.get(z).getIdc())));
+                jcNome1.setText(String.valueOf((lista1.get(z).getNomeC())));
+                jcHoras1.setText(String.valueOf((lista1.get(z).getHorasC())));
+                jcArea1.setText(String.valueOf((lista1.get(z).getAreaC())));
+                jcDiretor1.setText(String.valueOf((lista1.get(z).getDiretorC())));
+            }
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(AppInscricoes.class.getName()).log(Level.SEVERE, null, ex);
+        } finally {
+            try {
+                fileInputStream.close();
+            } catch (IOException ex) {
+                Logger.getLogger(AppInscricoes.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+    }//GEN-LAST:event_jdcRestaurarActionPerformed
+
+    private void jdcListarDispRActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jdcListarDispRActionPerformed
+        for (CursosDisciplinas f : lista4) {
+            System.out.println(f.toString());
+            jifDisp3.append(f.toString() + "\n");
+        }
+    }//GEN-LAST:event_jdcListarDispRActionPerformed
+
+    private void jifLimpar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jifLimpar1ActionPerformed
+        jifDisp3.setText("");
+    }//GEN-LAST:event_jifLimpar1ActionPerformed
+
+    private void jdcRemoverDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jdcRemoverDActionPerformed
+        CursosDisciplinas cursosdisciplinas = new CursosDisciplinas();
+        lista4.remove((int) jfcSpinner2.getValue() - 1);
+        inscricao = 2;
+        int j = lista4.size();
+        for (int x = 1; x < j + 1; x++) {
+            cursosdisciplinas = lista4.get(x - 1);
+            cursosdisciplinas.setIdreg(idreg++);
+        }
+    }//GEN-LAST:event_jdcRemoverDActionPerformed
+
+    private void jdcInserirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jdcInserirActionPerformed
+        CursosDisciplinas cursosdisciplinas = new CursosDisciplinas();
+        cursosdisciplinas.setIdreg(idreg++);
+        cursosdisciplinas.setIdCurso__(Integer.parseInt(jcIDcurso1.getText()));
+        cursosdisciplinas.setCurso__(String.valueOf(jcNome1.getText()));
+        cursosdisciplinas.setIdD_(Integer.parseInt(jcdCID1.getText()));
+        cursosdisciplinas.setNomeD_(String.valueOf(jifComboBox1.getSelectedItem()));
+       
+
+        lista4.add(cursosdisciplinas);
+    }//GEN-LAST:event_jdcInserirActionPerformed
+
+    private void jifComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jifComboBox1ActionPerformed
+        int indexbox = jifComboBox1.getSelectedIndex();
+
+        jcdCID1.setText(String.valueOf(indexbox + 1));
+    }//GEN-LAST:event_jifComboBox1ActionPerformed
+
+    private void jdcCarregarDiscipActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jdcCarregarDiscipActionPerformed
+        FileInputStream fileInputStream = null;
+
+        try {
+            fileInputStream = new FileInputStream(jifcarregar3.getText());
+            try ( ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream)) {
+                lista2 = (ArrayList<Disciplinas>) objectInputStream.readObject();
+            } catch (IOException | ClassNotFoundException ex) {
+                Logger.getLogger(AppInscricoes.class.getName()).log(Level.SEVERE, null, ex);
+            }
+
+            for (Disciplinas lista2 : lista2) {
+                jifComboBox1.addItem(lista2.getNomeD());
+
+
+            }
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(AppInscricoes.class.getName()).log(Level.SEVERE, null, ex);
+        } finally {
+            try {
+                fileInputStream.close();
+            } catch (IOException ex) {
+                Logger.getLogger(AppInscricoes.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+
+    }//GEN-LAST:event_jdcCarregarDiscipActionPerformed
+
+    private void jdcCarregarCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jdcCarregarCActionPerformed
+        jcIDcurso1.setText(String.valueOf((lista1.get((int) jdcID.getValue() - 1).getIdc())));
+        jcNome1.setText(String.valueOf((lista1.get((int) jdcID.getValue() - 1).getNomeC())));
+        jcHoras1.setText(String.valueOf((lista1.get((int) jdcID.getValue() - 1).getHorasC())));
+        jcArea1.setText(String.valueOf((lista1.get((int) jdcID.getValue() - 1).getAreaC())));
+        jcDiretor1.setText(String.valueOf((lista1.get((int) jdcID.getValue() - 1).getDiretorC())));
+        jfDisp3.setText(String.valueOf(lista1.get((int) jdcID.getValue() - 1)));
+    }//GEN-LAST:event_jdcCarregarCActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1284,6 +2114,7 @@ public class AppInscricoes extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
@@ -1298,8 +2129,25 @@ public class AppInscricoes extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel25;
+    private javax.swing.JLabel jLabel26;
+    private javax.swing.JLabel jLabel27;
+    private javax.swing.JLabel jLabel28;
+    private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel30;
+    private javax.swing.JLabel jLabel31;
+    private javax.swing.JLabel jLabel32;
+    private javax.swing.JLabel jLabel33;
+    private javax.swing.JLabel jLabel34;
+    private javax.swing.JLabel jLabel35;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
@@ -1307,36 +2155,50 @@ public class AppInscricoes extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
+    private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane10;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JScrollPane jScrollPane6;
+    private javax.swing.JScrollPane jScrollPane7;
+    private javax.swing.JScrollPane jScrollPane8;
+    private javax.swing.JScrollPane jScrollPane9;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTextField jcArea;
+    private javax.swing.JTextField jcArea1;
     private javax.swing.JButton jcAtualizarCurso;
     private javax.swing.JButton jcCarregar;
     private javax.swing.JTextField jcCarregarL;
     private javax.swing.JButton jcCarregarListagem;
     private javax.swing.JTextField jcDiretor;
+    private javax.swing.JTextField jcDiretor1;
     private javax.swing.JTextArea jcDisp;
     private javax.swing.JTextArea jcDispL;
     private javax.swing.JButton jcEliminar;
     private javax.swing.JButton jcGuardarListagem;
     private javax.swing.JTextField jcHoras;
+    private javax.swing.JTextField jcHoras1;
     private javax.swing.JSpinner jcID;
     private javax.swing.JTextField jcIDcurso;
+    private javax.swing.JTextField jcIDcurso1;
     private javax.swing.JButton jcLimpar;
     private javax.swing.JButton jcListar;
     private javax.swing.JButton jcModificar;
     private javax.swing.JTextField jcNome;
+    private javax.swing.JTextField jcNome1;
     private javax.swing.JButton jcRegistarC;
+    private javax.swing.JTextField jcdCID1;
     private javax.swing.JButton jdAtualizar;
     private javax.swing.JButton jdCarregar;
     private javax.swing.JTextField jdCarregarL;
@@ -1351,25 +2213,60 @@ public class AppInscricoes extends javax.swing.JFrame {
     private javax.swing.JButton jdListarD;
     private javax.swing.JTextField jdNome;
     private javax.swing.JButton jdRegistarD;
+    private javax.swing.JButton jdcCarregarC;
+    private javax.swing.JButton jdcCarregarDiscip;
+    private javax.swing.JSpinner jdcID;
+    private javax.swing.JButton jdcInserir;
+    private javax.swing.JButton jdcListarDispR;
+    private javax.swing.JButton jdcRemoverD;
+    private javax.swing.JButton jdcRestaurar;
+    private javax.swing.JTextField jdccarregar1;
     private javax.swing.JTextField jfAltura;
+    private javax.swing.JTextField jfAltura2;
     private javax.swing.JButton jfAtualizarFormando;
     private javax.swing.JButton jfCarregar;
     private javax.swing.JButton jfClean;
     private javax.swing.JTextArea jfDisp;
+    private javax.swing.JTextArea jfDisp2;
+    private javax.swing.JTextArea jfDisp3;
     private javax.swing.JButton jfEliminar;
     private javax.swing.JRadioButton jfFemi;
+    private javax.swing.JRadioButton jfFemi2;
     private javax.swing.JButton jfGuardar;
     private javax.swing.JSpinner jfID;
     private javax.swing.JTextField jfIDaluno;
+    private javax.swing.JTextField jfIDaluno2;
     private javax.swing.JTextField jfIdade;
+    private javax.swing.JTextField jfIdade2;
     private javax.swing.JButton jfListarF;
     private javax.swing.JRadioButton jfMasc;
+    private javax.swing.JRadioButton jfMasc2;
     private javax.swing.JButton jfModificarF;
     private javax.swing.JTextField jfNome;
+    private javax.swing.JTextField jfNome2;
     private javax.swing.JTextField jfPais;
+    private javax.swing.JTextField jfPais2;
     private javax.swing.JButton jfRegistarFormando;
     private javax.swing.JButton jfRestaura;
+    private javax.swing.JButton jfRestaura1;
     private javax.swing.ButtonGroup jfSexo;
+    private javax.swing.JSpinner jfcSpinner1;
+    private javax.swing.JSpinner jfcSpinner2;
     private javax.swing.JTextField jfcarregar;
+    private javax.swing.JTextField jfcarregar1;
+    private javax.swing.JTextField jifCID;
+    private javax.swing.JButton jifCarregarCurso;
+    private javax.swing.JComboBox<String> jifComboBox;
+    private javax.swing.JComboBox<String> jifComboBox1;
+    private javax.swing.JTextArea jifDisp2;
+    private javax.swing.JTextArea jifDisp3;
+    private javax.swing.JSpinner jifID;
+    private javax.swing.JButton jifInscreverAlunos;
+    private javax.swing.JButton jifLimpar;
+    private javax.swing.JButton jifLimpar1;
+    private javax.swing.JButton jifListarA;
+    private javax.swing.JButton jifRemover;
+    private javax.swing.JTextField jifcarregar2;
+    private javax.swing.JTextField jifcarregar3;
     // End of variables declaration//GEN-END:variables
 }
