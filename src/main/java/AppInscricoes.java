@@ -166,6 +166,10 @@ public class AppInscricoes extends javax.swing.JFrame {
         jifLimpar = new javax.swing.JButton();
         jifCID = new javax.swing.JTextField();
         jfcSpinner1 = new javax.swing.JSpinner();
+        jLabel36 = new javax.swing.JLabel();
+        jifCarregarL1 = new javax.swing.JTextField();
+        jifCarregarListagemL1 = new javax.swing.JButton();
+        jfGuardarListagem1 = new javax.swing.JButton();
         jLabel20 = new javax.swing.JLabel();
         jfcarregar1 = new javax.swing.JTextField();
         jfRestaura1 = new javax.swing.JButton();
@@ -203,6 +207,10 @@ public class AppInscricoes extends javax.swing.JFrame {
         jdcCarregarDiscip = new javax.swing.JButton();
         jLabel35 = new javax.swing.JLabel();
         jifcarregar3 = new javax.swing.JTextField();
+        jfGuardarListagem3 = new javax.swing.JButton();
+        jLabel40 = new javax.swing.JLabel();
+        jifCarregarL3 = new javax.swing.JTextField();
+        jifCarregarListagemL3 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -373,7 +381,7 @@ public class AppInscricoes extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(jfClean))
                             .addComponent(jfIDaluno, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(95, Short.MAX_VALUE))
+                .addContainerGap(102, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -404,33 +412,31 @@ public class AppInscricoes extends javax.swing.JFrame {
                     .addComponent(jfAltura, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                            .addComponent(jfAtualizarFormando)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(jfRegistarFormando)
+                                .addComponent(jfListarF))
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED))
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(jfGuardar)
+                                .addComponent(jfRestaura))
+                            .addGap(18, 18, 18)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel6)
-                        .addGap(23, 23, 23)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel3)
-                            .addComponent(jfPais, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jfMasc)
-                            .addComponent(jfFemi))
-                        .addGap(6, 72, Short.MAX_VALUE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                .addComponent(jfAtualizarFormando)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jLabel6)
+                                .addGap(23, 23, 23)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jfRegistarFormando)
-                                    .addComponent(jfListarF))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jfGuardar)
-                                    .addComponent(jfRestaura))
-                                .addGap(18, 18, 18)))))
+                                    .addComponent(jLabel3)
+                                    .addComponent(jfPais, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(jfMasc)
+                                .addComponent(jfFemi)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)))
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -954,6 +960,22 @@ public class AppInscricoes extends javax.swing.JFrame {
 
         jfcSpinner1.setModel(new javax.swing.SpinnerNumberModel(1, 1, null, 1));
 
+        jLabel36.setText("Nome do Ficheiro");
+
+        jifCarregarListagemL1.setText("Carregar Listagem");
+        jifCarregarListagemL1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jifCarregarListagemL1ActionPerformed(evt);
+            }
+        });
+
+        jfGuardarListagem1.setText("Guardar Listagem");
+        jfGuardarListagem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jfGuardarListagem1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
@@ -961,6 +983,18 @@ public class AppInscricoes extends javax.swing.JFrame {
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addGap(6, 6, 6)
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel4Layout.createSequentialGroup()
+                                .addComponent(jfGuardarListagem1)
+                                .addGap(18, 18, 18)
+                                .addComponent(jifCarregarListagemL1))
+                            .addGroup(jPanel4Layout.createSequentialGroup()
+                                .addComponent(jLabel36)
+                                .addGap(18, 18, 18)
+                                .addComponent(jifCarregarL1, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 504, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1019,6 +1053,14 @@ public class AppInscricoes extends javax.swing.JFrame {
                     .addComponent(jifLimpar))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jfGuardarListagem1)
+                    .addComponent(jifCarregarListagemL1))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel36)
+                    .addComponent(jifCarregarL1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -1048,7 +1090,7 @@ public class AppInscricoes extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(jPanel7Layout.createSequentialGroup()
-                                        .addComponent(jfIdade2, javax.swing.GroupLayout.DEFAULT_SIZE, 168, Short.MAX_VALUE)
+                                        .addComponent(jfIdade2, javax.swing.GroupLayout.DEFAULT_SIZE, 175, Short.MAX_VALUE)
                                         .addGap(193, 193, 193))
                                     .addGroup(jPanel7Layout.createSequentialGroup()
                                         .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1311,6 +1353,22 @@ public class AppInscricoes extends javax.swing.JFrame {
 
         jLabel35.setText("Nome do Ficheiro");
 
+        jfGuardarListagem3.setText("Guardar Listagem");
+        jfGuardarListagem3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jfGuardarListagem3ActionPerformed(evt);
+            }
+        });
+
+        jLabel40.setText("Nome do Ficheiro");
+
+        jifCarregarListagemL3.setText("Carregar Listagem");
+        jifCarregarListagemL3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jifCarregarListagemL3ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
         jPanel10.setLayout(jPanel10Layout);
         jPanel10Layout.setHorizontalGroup(
@@ -1338,7 +1396,7 @@ public class AppInscricoes extends javax.swing.JFrame {
                         .addComponent(jifComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jcdCID1, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 11, Short.MAX_VALUE)
                         .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel10Layout.createSequentialGroup()
@@ -1346,7 +1404,18 @@ public class AppInscricoes extends javax.swing.JFrame {
                                     .addGap(115, 115, 115))
                                 .addComponent(jifcarregar3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(jdcCarregarDiscip))
-                        .addGap(96, 96, 96))))
+                        .addGap(96, 96, 96))
+                    .addGroup(jPanel10Layout.createSequentialGroup()
+                        .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel10Layout.createSequentialGroup()
+                                .addComponent(jfGuardarListagem3)
+                                .addGap(18, 18, 18)
+                                .addComponent(jifCarregarListagemL3))
+                            .addGroup(jPanel10Layout.createSequentialGroup()
+                                .addComponent(jLabel40)
+                                .addGap(18, 18, 18)
+                                .addComponent(jifCarregarL3, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 0, Short.MAX_VALUE))))
         );
         jPanel10Layout.setVerticalGroup(
             jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1376,6 +1445,14 @@ public class AppInscricoes extends javax.swing.JFrame {
                     .addComponent(jifLimpar1))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane10, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jfGuardarListagem3)
+                    .addComponent(jifCarregarListagemL3))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel40)
+                    .addComponent(jifCarregarL3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -1429,7 +1506,7 @@ public class AppInscricoes extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(60, 60, 60)
-                .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 476, Short.MAX_VALUE)
+                .addComponent(jTabbedPane1)
                 .addContainerGap())
         );
 
@@ -1456,7 +1533,7 @@ public class AppInscricoes extends javax.swing.JFrame {
     private void jfGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jfGuardarActionPerformed
         try {
             FileOutputStream fileOutputStream = new FileOutputStream(jfcarregar.getText());
-            try ( ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream)) {
+            try (ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream)) {
                 objectOutputStream.writeObject(lista);
                 objectOutputStream.flush();
             } catch (IOException ex) {
@@ -1479,7 +1556,7 @@ public class AppInscricoes extends javax.swing.JFrame {
 
         try {
             fileInputStream = new FileInputStream(jfcarregar.getText());
-            try ( ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream)) {
+            try (ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream)) {
                 lista = (ArrayList<Formandos>) objectInputStream.readObject();
             } catch (IOException | ClassNotFoundException ex) {
                 Logger.getLogger(AppInscricoes.class.getName()).log(Level.SEVERE, null, ex);
@@ -1621,7 +1698,7 @@ public class AppInscricoes extends javax.swing.JFrame {
     private void jcGuardarListagemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcGuardarListagemActionPerformed
         try {
             FileOutputStream fileOutputStream = new FileOutputStream(jcCarregarL.getText());
-            try ( ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream)) {
+            try (ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream)) {
                 objectOutputStream.writeObject(lista1);
                 objectOutputStream.flush();
             } catch (IOException ex) {
@@ -1638,7 +1715,7 @@ public class AppInscricoes extends javax.swing.JFrame {
 
         try {
             fileInputStream = new FileInputStream(jcCarregarL.getText());
-            try ( ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream)) {
+            try (ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream)) {
                 lista1 = (ArrayList<Cursos>) objectInputStream.readObject();
             } catch (IOException | ClassNotFoundException ex) {
                 Logger.getLogger(AppInscricoes.class.getName()).log(Level.SEVERE, null, ex);
@@ -1742,7 +1819,7 @@ public class AppInscricoes extends javax.swing.JFrame {
     private void jdGuardarListagemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jdGuardarListagemActionPerformed
         try {
             FileOutputStream fileOutputStream = new FileOutputStream(jdCarregarL.getText());
-            try ( ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream)) {
+            try (ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream)) {
                 objectOutputStream.writeObject(lista2);
                 objectOutputStream.flush();
             } catch (IOException ex) {
@@ -1759,7 +1836,7 @@ public class AppInscricoes extends javax.swing.JFrame {
 
         try {
             fileInputStream = new FileInputStream(jdCarregarL.getText());
-            try ( ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream)) {
+            try (ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream)) {
                 lista2 = (ArrayList<Disciplinas>) objectInputStream.readObject();
             } catch (IOException | ClassNotFoundException ex) {
                 Logger.getLogger(AppInscricoes.class.getName()).log(Level.SEVERE, null, ex);
@@ -1863,7 +1940,7 @@ public class AppInscricoes extends javax.swing.JFrame {
 
         try {
             fileInputStream = new FileInputStream(jfcarregar1.getText());
-            try ( ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream)) {
+            try (ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream)) {
                 lista = (ArrayList<Formandos>) objectInputStream.readObject();
             } catch (IOException | ClassNotFoundException ex) {
                 Logger.getLogger(AppInscricoes.class.getName()).log(Level.SEVERE, null, ex);
@@ -1899,7 +1976,7 @@ public class AppInscricoes extends javax.swing.JFrame {
 
         try {
             fileInputStream = new FileInputStream(jifcarregar2.getText());
-            try ( ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream)) {
+            try (ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream)) {
                 lista1 = (ArrayList<Cursos>) objectInputStream.readObject();
             } catch (IOException | ClassNotFoundException ex) {
                 Logger.getLogger(AppInscricoes.class.getName()).log(Level.SEVERE, null, ex);
@@ -1959,7 +2036,7 @@ public class AppInscricoes extends javax.swing.JFrame {
 
     private void jifRemoverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jifRemoverActionPerformed
         FormandosCursos formandoscursos = new FormandosCursos();
-        lista3.remove((int) jfcSpinner1.getValue() - 1);
+        lista3.remove((int) jfcSpinner1.getValue());
         inscricao = 2;
         int j = lista3.size();
         for (int x = 1; x < j + 1; x++) {
@@ -1974,7 +2051,7 @@ public class AppInscricoes extends javax.swing.JFrame {
 
         try {
             fileInputStream = new FileInputStream(jdccarregar1.getText());
-            try ( ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream)) {
+            try (ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream)) {
                 lista1 = (ArrayList<Cursos>) objectInputStream.readObject();
             } catch (IOException | ClassNotFoundException ex) {
                 Logger.getLogger(AppInscricoes.class.getName()).log(Level.SEVERE, null, ex);
@@ -2010,7 +2087,7 @@ public class AppInscricoes extends javax.swing.JFrame {
 
     private void jdcRemoverDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jdcRemoverDActionPerformed
         CursosDisciplinas cursosdisciplinas = new CursosDisciplinas();
-        lista4.remove((int) jfcSpinner2.getValue() - 1);
+        lista4.remove((int) jfcSpinner2.getValue());
         inscricao = 2;
         int j = lista4.size();
         for (int x = 1; x < j + 1; x++) {
@@ -2026,7 +2103,6 @@ public class AppInscricoes extends javax.swing.JFrame {
         cursosdisciplinas.setCurso__(String.valueOf(jcNome1.getText()));
         cursosdisciplinas.setIdD_(Integer.parseInt(jcdCID1.getText()));
         cursosdisciplinas.setNomeD_(String.valueOf(jifComboBox1.getSelectedItem()));
-       
 
         lista4.add(cursosdisciplinas);
     }//GEN-LAST:event_jdcInserirActionPerformed
@@ -2042,7 +2118,7 @@ public class AppInscricoes extends javax.swing.JFrame {
 
         try {
             fileInputStream = new FileInputStream(jifcarregar3.getText());
-            try ( ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream)) {
+            try (ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream)) {
                 lista2 = (ArrayList<Disciplinas>) objectInputStream.readObject();
             } catch (IOException | ClassNotFoundException ex) {
                 Logger.getLogger(AppInscricoes.class.getName()).log(Level.SEVERE, null, ex);
@@ -2050,7 +2126,6 @@ public class AppInscricoes extends javax.swing.JFrame {
 
             for (Disciplinas lista2 : lista2) {
                 jifComboBox1.addItem(lista2.getNomeD());
-
 
             }
         } catch (FileNotFoundException ex) {
@@ -2073,6 +2148,90 @@ public class AppInscricoes extends javax.swing.JFrame {
         jcDiretor1.setText(String.valueOf((lista1.get((int) jdcID.getValue() - 1).getDiretorC())));
         jfDisp3.setText(String.valueOf(lista1.get((int) jdcID.getValue() - 1)));
     }//GEN-LAST:event_jdcCarregarCActionPerformed
+
+    private void jifCarregarListagemL1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jifCarregarListagemL1ActionPerformed
+        FileInputStream fileInputStream = null;
+
+        try {
+            fileInputStream = new FileInputStream(jifCarregarL1.getText());
+            try (ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream)) {
+                lista3 = (ArrayList<FormandosCursos>) objectInputStream.readObject();
+            } catch (IOException | ClassNotFoundException ex) {
+                Logger.getLogger(AppInscricoes.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            for (FormandosCursos f : lista3) {
+                System.out.println(f.toString());
+                jifDisp2.append(f.toString() + "\n");
+            }
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(AppInscricoes.class.getName()).log(Level.SEVERE, null, ex);
+        } finally {
+            try {
+                fileInputStream.close();
+            } catch (IOException ex) {
+                Logger.getLogger(AppInscricoes.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+    }//GEN-LAST:event_jifCarregarListagemL1ActionPerformed
+
+    private void jfGuardarListagem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jfGuardarListagem1ActionPerformed
+        try {
+            FileOutputStream fileOutputStream = new FileOutputStream(jifCarregarL1.getText());
+            try (ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream)) {
+                objectOutputStream.writeObject(lista3);
+                objectOutputStream.flush();
+            } catch (IOException ex) {
+                Logger.getLogger(AppInscricoes.class
+                        .getName()).log(Level.SEVERE, null, ex);
+            }
+
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(AppInscricoes.class
+                    .getName()).log(Level.SEVERE, null, ex);
+        }    
+    }//GEN-LAST:event_jfGuardarListagem1ActionPerformed
+
+    private void jfGuardarListagem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jfGuardarListagem3ActionPerformed
+               try {
+            FileOutputStream fileOutputStream = new FileOutputStream(jifCarregarL3.getText());
+            try (ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream)) {
+                objectOutputStream.writeObject(lista4);
+                objectOutputStream.flush();
+            } catch (IOException ex) {
+                Logger.getLogger(AppInscricoes.class
+                        .getName()).log(Level.SEVERE, null, ex);
+            }
+
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(AppInscricoes.class
+                    .getName()).log(Level.SEVERE, null, ex);
+        }    
+    }//GEN-LAST:event_jfGuardarListagem3ActionPerformed
+
+    private void jifCarregarListagemL3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jifCarregarListagemL3ActionPerformed
+                FileInputStream fileInputStream = null;
+
+        try {
+            fileInputStream = new FileInputStream(jifCarregarL3.getText());
+            try (ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream)) {
+                lista4 = (ArrayList<CursosDisciplinas>) objectInputStream.readObject();
+            } catch (IOException | ClassNotFoundException ex) {
+                Logger.getLogger(AppInscricoes.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            for (CursosDisciplinas f : lista4) {
+                System.out.println(f.toString());
+                jifDisp3.append(f.toString() + "\n");
+            }
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(AppInscricoes.class.getName()).log(Level.SEVERE, null, ex);
+        } finally {
+            try {
+                fileInputStream.close();
+            } catch (IOException ex) {
+                Logger.getLogger(AppInscricoes.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+    }//GEN-LAST:event_jifCarregarListagemL3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -2148,7 +2307,15 @@ public class AppInscricoes extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel33;
     private javax.swing.JLabel jLabel34;
     private javax.swing.JLabel jLabel35;
+    private javax.swing.JLabel jLabel36;
+    private javax.swing.JLabel jLabel37;
+    private javax.swing.JLabel jLabel38;
+    private javax.swing.JLabel jLabel39;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel40;
+    private javax.swing.JLabel jLabel43;
+    private javax.swing.JLabel jLabel44;
+    private javax.swing.JLabel jLabel45;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
@@ -2156,6 +2323,8 @@ public class AppInscricoes extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
+    private javax.swing.JPanel jPanel11;
+    private javax.swing.JPanel jPanel13;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
@@ -2166,6 +2335,8 @@ public class AppInscricoes extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane10;
+    private javax.swing.JScrollPane jScrollPane11;
+    private javax.swing.JScrollPane jScrollPane13;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
@@ -2233,6 +2404,10 @@ public class AppInscricoes extends javax.swing.JFrame {
     private javax.swing.JRadioButton jfFemi;
     private javax.swing.JRadioButton jfFemi2;
     private javax.swing.JButton jfGuardar;
+    private javax.swing.JButton jfGuardarListagem1;
+    private javax.swing.JButton jfGuardarListagem2;
+    private javax.swing.JButton jfGuardarListagem3;
+    private javax.swing.JButton jfGuardarListagem4;
     private javax.swing.JSpinner jfID;
     private javax.swing.JTextField jfIDaluno;
     private javax.swing.JTextField jfIDaluno2;
@@ -2252,21 +2427,49 @@ public class AppInscricoes extends javax.swing.JFrame {
     private javax.swing.ButtonGroup jfSexo;
     private javax.swing.JSpinner jfcSpinner1;
     private javax.swing.JSpinner jfcSpinner2;
+    private javax.swing.JSpinner jfcSpinner3;
+    private javax.swing.JSpinner jfcSpinner5;
     private javax.swing.JTextField jfcarregar;
     private javax.swing.JTextField jfcarregar1;
     private javax.swing.JTextField jifCID;
+    private javax.swing.JTextField jifCID1;
+    private javax.swing.JTextField jifCID3;
     private javax.swing.JButton jifCarregarCurso;
+    private javax.swing.JButton jifCarregarCurso1;
+    private javax.swing.JButton jifCarregarCurso3;
+    private javax.swing.JTextField jifCarregarL1;
+    private javax.swing.JTextField jifCarregarL2;
+    private javax.swing.JTextField jifCarregarL3;
+    private javax.swing.JTextField jifCarregarL4;
+    private javax.swing.JButton jifCarregarListagemL1;
+    private javax.swing.JButton jifCarregarListagemL2;
+    private javax.swing.JButton jifCarregarListagemL3;
+    private javax.swing.JButton jifCarregarListagemL4;
     private javax.swing.JComboBox<String> jifComboBox;
     private javax.swing.JComboBox<String> jifComboBox1;
+    private javax.swing.JComboBox<String> jifComboBox2;
+    private javax.swing.JComboBox<String> jifComboBox4;
     private javax.swing.JTextArea jifDisp2;
     private javax.swing.JTextArea jifDisp3;
+    private javax.swing.JTextArea jifDisp4;
+    private javax.swing.JTextArea jifDisp6;
     private javax.swing.JSpinner jifID;
     private javax.swing.JButton jifInscreverAlunos;
+    private javax.swing.JButton jifInscreverAlunos1;
+    private javax.swing.JButton jifInscreverAlunos3;
     private javax.swing.JButton jifLimpar;
     private javax.swing.JButton jifLimpar1;
+    private javax.swing.JButton jifLimpar2;
+    private javax.swing.JButton jifLimpar4;
     private javax.swing.JButton jifListarA;
+    private javax.swing.JButton jifListarA1;
+    private javax.swing.JButton jifListarA3;
     private javax.swing.JButton jifRemover;
+    private javax.swing.JButton jifRemover1;
+    private javax.swing.JButton jifRemover3;
     private javax.swing.JTextField jifcarregar2;
     private javax.swing.JTextField jifcarregar3;
+    private javax.swing.JTextField jifcarregar4;
+    private javax.swing.JTextField jifcarregar6;
     // End of variables declaration//GEN-END:variables
 }
